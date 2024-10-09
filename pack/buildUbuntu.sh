@@ -8,7 +8,6 @@ sudo apt install openssl
 sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools
 sudo apt install qttools5-dev
 sudo apt install ninja-build
-cd ../../..
 git fetch
 git submodule init
 git submodule update
@@ -17,7 +16,7 @@ git checkout deps
 cd dep/openssl/openssl/
 ./config -fPIC
 make
-cd 
+cd ../../..
 mkdir -vp build/release
 cd build/release
 cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ../..
